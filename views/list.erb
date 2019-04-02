@@ -1,10 +1,12 @@
 <ul>
   <% @books.each do |book| %>
-  <li><%= book.id %></li>
+  <%= book.id %>
   <%= Rack::Utils.escape_html(book.bookname) %>
   <%= Rack::Utils.escape_html(book.author) %>
   <%= Rack::Utils.escape_html(book.publisher) %>
   <%= book.points %>
+  <span class="delete">[x]</span>
+  <br>
   <% end %>
 </ul>
 <a href="/home">戻る</a>

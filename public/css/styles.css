@@ -4,12 +4,27 @@ body {
 }
 
 .container {
-  width: 400px;
+  width: 1000px;
   margin: 20px auto;
+  text-align: center;
 }
 
 h1 {
   font-size: 18px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
+}
+
+.delete {
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+button {
+  margin: 20px;
 }
