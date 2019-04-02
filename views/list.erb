@@ -1,1 +1,10 @@
+<ul>
+  <% @books.each do |book| %>
+  <li><%= book.id %></li>
+  <%= book.bookname %>
+  <%= book.author %>
+  <%= book.publisher %>
+  <%= book.points %>
+  <% end %>
+</ul>
 <a href="/home">戻る</a>
