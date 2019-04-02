@@ -20,6 +20,16 @@ get '/register' do
   erb :register
 end
 
+post '/create' do
+  Book.create(
+    bookname: params[:bookname],
+    author: params[:author],
+    publisher: params[:publisher],
+    points: params[:points]
+  )
+  redirect to('register')
+end
+
 get '/list' do
   @title = "一覧"
   @books = Book.all
