@@ -8,7 +8,11 @@ get '/home' do
 end
 
 get '/register' do
+  @title = "登録"
+  erb :register
 end
 
 get '/list' do
+  @title = "一覧"
+  erb :list
 end
