@@ -8,6 +8,10 @@ ActiveRecord::Base.establish_connection(
 )
 
 class Book < ActiveRecord::Base
+  validates :bookname, presence: true
+  validates :author, presence: true
+  validates :publisher, presence: true
+  validates :points, numericality: {greater_than: 0}
 end
 
 get '/home' do
