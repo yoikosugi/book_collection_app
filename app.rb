@@ -39,3 +39,7 @@ get '/list' do
   @books = Book.all
   erb :list
 end
+
+post '/destroy' do
+  Book.find(params[:id]).destroy
+end

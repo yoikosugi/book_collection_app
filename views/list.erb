@@ -1,12 +1,11 @@
 <ul>
   <% @books.each do |book| %>
-  <li>
-  <%= book.id %>
-  <%= Rack::Utils.escape_html(book.bookname) %>
-  <%= Rack::Utils.escape_html(book.author) %>
-  <%= Rack::Utils.escape_html(book.publisher) %>
-  <%= book.points %>
-  <span class="delete">[x]</span>
+  <li data-id="<%= book.id %>">
+    <%= Rack::Utils.escape_html(book.bookname) %>
+    <%= Rack::Utils.escape_html(book.author) %>
+    <%= Rack::Utils.escape_html(book.publisher) %>
+    <%= book.points %>
+    <span class="delete">[x]</span>
   </li>
   <% end %>
 </ul>
