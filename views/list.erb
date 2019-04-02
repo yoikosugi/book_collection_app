@@ -1,9 +1,9 @@
 <ul>
   <% @books.each do |book| %>
   <li><%= book.id %></li>
-  <%= book.bookname %>
-  <%= book.author %>
-  <%= book.publisher %>
+  <%= Rack::Utils.escape_html(book.bookname) %>
+  <%= Rack::Utils.escape_html(book.author) %>
+  <%= Rack::Utils.escape_html(book.publisher) %>
   <%= book.points %>
   <% end %>
 </ul>
