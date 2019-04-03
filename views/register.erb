@@ -1,4 +1,5 @@
 <form action="/create" method="post">
+  <%= Rack::Csrf.csrf_tag(env) %>
   <p>書名</p>
   <input type="text" name="bookname">
   <p>著者名</p>
