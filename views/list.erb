@@ -1,9 +1,9 @@
 <ul>
   <% @books.each do |book| %>
-  <li data-id="<%= book.id %>" data-token="<%= Rack::Csrf.csrf_token(env) %>">
-    <%= Rack::Utils.escape_html(book.bookname) %>
-    <%= Rack::Utils.escape_html(book.author) %>
-    <%= Rack::Utils.escape_html(book.publisher) %>
+  <li data-id="<%= book.id %>" data-token="<%= csrf_token %>">
+    <%= h(book.bookname) %>
+    <%= h(book.author) %>
+    <%= h(book.publisher) %>
     <%= book.points %>
     <span class="delete">[x]</span>
   </li>
